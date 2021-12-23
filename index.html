@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Comparing "Brick" and "Mortar"</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.2/dist/chartjs-plugin-deferred.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="mybackground">
+    </div>
+
+    <div class="section1">
+        <h1 id="title">Comparing <span id="brick">Brick</span> and <span id="mortar">Mortar</span> </h1>
+        <p class="subtitle"> <span>Could online sales take over retail one day?</span></p>
+
+
+        <p>
+            Online’s share of total retail sales has steadily been on the rise—with ecommerce penetration hitting 19.6% in 2020, Digital Commerce 360 estimates. That’s up from 15.8% in 2019 and 14.3% in 2018. The nearly four-percentage point gain in ecommerce penetration
+            is by far the biggest year-over-year jump for U.S. retail sales ever recorded. No other year has even reached a two percentage-point gain in digital penetration.
+        </p>
+
+        <div class="container-tiles">
+            <div class="row">
+                <div class="c-dashboardInfo column-tile">
+                    <div class="wrap">
+                        <h4 class=" c-dashboardInfo__title">Average Weekly Online Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">£3,028m</span>
+                    </div>
+                </div>
+                <div class="c-dashboardInfo column-tile">
+                    <div class="wrap">
+                        <h4 class="c-dashboardInfo__title">Online Retail Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">    
+                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">45.8%</span>
+                    </div>
+                </div>
+                <div class="c-dashboardInfo column-tile">
+                    <div class="wrap">
+                        <h4 class="c-dashboardInfo__title">Retail Sales<br><svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">0.8%</span>
+                    </div>
+                </div>
+                <div class="c-dashboardInfo column-tile">
+                    <div class="wrap">
+                        <h4 class="c-dashboardInfo__title">Online Clothing & Footwear Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">47.1%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <h1>2006-2020 <span class="online">Online</span> vs. In-Store Retail Sales</h1>
+        <div class="wrapper">
+            <canvas id="stacked-chart"></canvas>
+        </div>
+        <div class='tableauPlaceholder' id='viz1640166719150' style='position: relative; margin-top: 30px;margin-left:auto;margin-right:auto;'><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='European_Map_Viz&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1640166719150');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) {
+                vizElement.style.width = '1000px';
+                vizElement.style.height = '827px';
+            } else if (divElement.offsetWidth > 500) {
+                vizElement.style.width = '1000px';
+                vizElement.style.height = '827px';
+            } else {
+                vizElement.style.width = '100%';
+                vizElement.style.height = '727px';
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+
+
+
+
+    </div>
+    <div id="bottom">
+        <h1 style="color: black;">How many online purchases per individual in UK</h1>
+        <main class="reveal">
+            <section>
+                <!-- <div class="year">2021</div> -->
+                <canvas width="230" height="400" id="myDonutChart"></canvas>
+
+            </section>
+        </main>
+    </div>
+    <div id="next">
+        <div class="row">
+            <div class="column-logo">
+                <img height="200" width="250" src='./Assets/mobile_phone.png'>
+            </div>
+            <div class="column2">
+                <h1 style="margin-top:30px; color:black;font-size: 40px;">Online Sales Growth</h1>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="column1">
+                </>
+                <table class="reveal">
+                    <thead>
+                        <tr>
+                            <th>Rank
+                                <th>Retailer
+                                    <th>2021 Net Sales
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Amazon</td>
+                            <!-- <td>437</td> -->
+
+                            <td>
+                                <a class="circle" id="circle1">
+                                    <span class="tooltip">14,668 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Tesco</td>
+                            <!-- <td>39.3</td> -->
+
+                            <td>
+                                <a class="circle" id="circle2">
+                                    <span class="tooltip">7,589 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Argos</td>
+                            <!-- <td>60.5</td> -->
+
+                            <td>
+                                <a class="circle" id="circle3">
+                                    <span class="tooltip">5,412 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sainsburys</td>
+                            <!-- <td>40</td> -->
+
+                            <td>
+                                <a class="circle" id="circle4">
+                                    <span class="tooltip">4,553 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Currys</td>
+                            <!-- <td>31.4</td> -->
+
+                            <td>
+                                <a class="circle" id="circle5">
+                                    <span class="tooltip">4,143 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>John Lewis</td>
+                            <!-- <td>28.8</td> -->
+
+                            <td>
+                                <a class="circle" id="circle6">
+                                    <span class="tooltip">3,548 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ocado</td>
+
+
+                            <td>
+                                <a class="circle" id="circle7">
+                                    <span class="tooltip">2,738 million U.S. dollars</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Mark's & Spencer</td>
+                            <!-- <td>32.6</td> -->
+
+                            <td>
+                                <a class="circle" id="circle8">
+                                    <span class="tooltip">2,432 million U.S. dollar</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>ASDA</td>
+                            <!-- <td>33.7</td> -->
+
+                            <td>
+                                <a class="circle" id="circle9">
+                                    <span class="tooltip">2,421 million U.S. dollar</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Morrisons</td>
+
+
+                            <td>
+                                <a class="circle" id="circle10">
+                                    <span class="tooltip">2,293 million U.S. dollar</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column2 reveal">
+                <h1 style="margin-bottom: 35px;color:black;">Purchases by Sector for 2020</h1>
+                <section class="bar-graph bar-graph-horizontal bar-graph-one reeveal" style="margin-left: 20%;">
+                    <div class="bar-one">
+                        <a>
+                            <img class="iconposition" src="./Assets/tshirt.png" style="height: 50px; width: 50px;" />
+                            <div class="bar" data-percentage="55%"></div>
+                            <span class="tooltip">Clothes, shoes, accessories</span>
+                        </a>
+
+
+                    </div>
+                    <div class="bar-two">
+                        <a>
+                            <img class="iconposition" src="./Assets/take-away.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Deliveries (restaurants, fast-food, catering)</span>
+                            <div class="bar" data-percentage="32%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-three">
+                        <a>
+                            <img class="iconposition" src="./Assets/magazine.png" style="margin-top: 5px;height: 50px; width: 50px;" />
+                            <span class="tooltip">Books, magazines, newspapers</span>
+                            <div class="bar" data-percentage="29%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-home">
+                        <a>
+                            <img class="iconposition" src="./Assets/furniture.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Furniture, home accessories, gardening</span>
+                            <div class="bar" data-percentage="28%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-four">
+                        <a>
+                            <img class="iconposition" src="./Assets/responsive.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Computers, tablets, smartphones, accessories</span>
+                            <div class="bar" data-percentage="24%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-five">
+                        <a>
+                            <img class="iconposition" src="./Assets/toys.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Children's toys and childcare</span>
+                            <div class="bar" data-percentage="22%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-six">
+                        <a>
+                            <img class="iconposition" src="./Assets/skincare.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Cosmetics, Beauty and wellness</span>
+                            <div class="bar" data-percentage="22%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-seven">
+                        <a>
+                            <img class="iconposition" src="./Assets/spray.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Cleaning and hygiene products</span>
+                            <div class="bar" data-percentage="18%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-eight">
+                        <a>
+                            <img class="iconposition" src="./Assets/appliances.png" style="height: 50px; width: 50px;" />
+                            <span class="tooltip">Consumer electronics</span>
+                            <div class="bar" data-percentage="18%"></div>
+                        </a>
+                    </div>
+                    <div class="bar-nine">
+                        <a>
+                            <img class="iconposition" src="./Assets/gym.png" style="height: 48px; width: 48px;" />
+                            <span class="tooltip">Sports goods (excluding clothing)</span>
+                            <div class="bar" data-percentage="17%"></div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <div id="next2">
+        <img src="./Assets/troley.png" height="200" style="margin-left: 10%;" alt="From PC to troley">
+    </div>
+
+    <h1 style="color: black;">Last Section</h1>
+
+    <div class='tableauPlaceholder' id='viz1640181179128' style='position: relative;margin-left:auto;margin-right:auto;'><object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+        <param name='name' value='Annualonlinesales&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' />
+    </object></div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1640181179128');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.minWidth = '500px';
+            vizElement.style.maxWidth = '1000px';
+            vizElement.style.width = '100%';
+            vizElement.style.minHeight = '267px';
+            vizElement.style.maxHeight = '507px';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.minWidth = '500px';
+            vizElement.style.maxWidth = '1000px';
+            vizElement.style.width = '100%';
+            vizElement.style.minHeight = '267px';
+            vizElement.style.maxHeight = '507px';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    <div class="container">
+        <br />
+        <div class="row">
+            <canvas id="lineChart"></canvas>
+
+        </div>
+    </div>
+    <div class="container">
+        <br />
+        <div class="row">
+
+            <canvas id="lineChartFuture"></canvas>
+
+        </div>
+    </div>
+
+    <img style="margin-left:auto; margin-right:auto; margin-top:30px; position:relative; display:block;" height="402" width="592" src="./Assets/builders.png" alt="Builders">
+    <div class="footer">
+        <div style="position:absolute; padding-top:10px;padding-left:30%"> <img src="https://www.southampton.ac.uk/blog/wp-content/themes/replay/images/logos/university-of-southampton.svg" height="30px" alt="University of Southampton"></div>
+        <p style="color: white; opacity:0.5; padding-right:auto;padding-left:10px;position: absolute;bottom:0;">Antonis Poullis © 2022 | COMP6234 </p>
+    </div>
+    <script src="javascript/donut_chart.js"></script>
+    <script src="javascript/charts.js"></script>
+    <script src="javascript/reveal.js"></script>
+</body>
+
+</html>
