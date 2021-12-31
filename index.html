@@ -5,9 +5,11 @@
     <meta charset="UTF-8" />
     <title>Comparing "Brick" and "Mortar"</title>
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/font-awesome/css/font-awesome.min.css">
     <script src="https://d3js.org/d3.v6.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.2/dist/chartjs-plugin-deferred.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </head>
 
 <body>
@@ -21,47 +23,12 @@
         <p class="subtitle"> <span>Could online sales take over retail one day?</span></p>
 
 
-        <p>
-            Online’s share of total retail sales has steadily been on the rise—with ecommerce penetration hitting 19.6% in 2020, Digital Commerce 360 estimates. That’s up from 15.8% in 2019 and 14.3% in 2018. The nearly four-percentage point gain in ecommerce penetration
-            is by far the biggest year-over-year jump for U.S. retail sales ever recorded. No other year has even reached a two percentage-point gain in digital penetration.
-        </p>
-
-        <div class="container-tiles">
-            <div class="row">
-                <div class="c-dashboardInfo column-tile">
-                    <div class="wrap">
-                        <h4 class=" c-dashboardInfo__title">Average Weekly Online Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
-                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">£3,028m</span>
-                    </div>
-                </div>
-                <div class="c-dashboardInfo column-tile">
-                    <div class="wrap">
-                        <h4 class="c-dashboardInfo__title">Online Retail Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">    
-                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">45.8%</span>
-                    </div>
-                </div>
-                <div class="c-dashboardInfo column-tile">
-                    <div class="wrap">
-                        <h4 class="c-dashboardInfo__title">Retail Sales<br><svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
-                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">0.8%</span>
-                    </div>
-                </div>
-                <div class="c-dashboardInfo column-tile">
-                    <div class="wrap">
-                        <h4 class="c-dashboardInfo__title">Online Clothing & Footwear Sales<svg class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
-                          </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">47.1%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
 
 
-        <h1>2006-2020 <span class="online">Online</span> vs. In-Store Retail Sales</h1>
-        <div class="wrapper">
-            <canvas id="stacked-chart"></canvas>
-        </div>
+        <h1 style="margin-top: 30px;font-size: 27px;"><i class="fas fa-globe-europe"></i> Average number of online purchases by individual in <span style="color: #FA3C3C">Europe </span> for 2020
+        </h1>
         <div class='tableauPlaceholder' id='viz1640166719150' style='position: relative; margin-top: 30px;margin-left:auto;margin-right:auto;'><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='European_Map_Viz&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>
             var divElement = document.getElementById('viz1640166719150');
@@ -80,6 +47,12 @@
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
+        <figcaption class="caption" style="color: white; width: 83%">Data Source <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi">Office of National Statistics</a>
+        </figcaption>
+
+        <div id="textbox2" style="border-color: #FA3C3C;text-align:justify;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;color:#FA3C3C;"></i> <span style="font-weight: bold;">UK customers </span> are the <span style="font-weight: bold; color:#FA3C3C;">No.1 online spenders in Europe</span>            for 2020 by purchasing more online products (92) on average than any other country, according to Eurostat's survey on a sample of online shopping platforms' customers in 33 European Countries.
+        </div>
 
 
 
@@ -87,14 +60,23 @@
 
     </div>
     <div id="bottom">
-        <h1 style="color: black;">How many online purchases per individual in UK</h1>
-        <main class="reveal">
+        <h1 style="color: black;"><i class="fas fa-poll"></i> Online Spending Habits</h1>
+        <p style="color: black;font-style: italic;font-weight:400;font-size:18px;color:black;margin-top:20px">Office for National Statistics examined the number of online purchases made by UK residents in a monthly basis by taking a survey in 2020. The sample consisted of people representing different age groups from 18 to 65+ years old.</p>
+        <main>
             <section>
                 <!-- <div class="year">2021</div> -->
                 <canvas width="230" height="400" id="myDonutChart"></canvas>
 
+
             </section>
         </main>
+        <figcaption class="caption" style="color: black; text-align:center; margin-left: 100px;">Data Source <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi">Office of National Statistics</a>
+        </figcaption>
+        <div id="textbox" style="color: black; border-color:#6BB1CC;margin-bottom: 40px;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;"></i>
+            <span style="font-weight: bold; font-size:17px;"></span> <span style="font-weight: bold;color:#6BB1CC; font-size:17px;"></span> The majority of UK customers answered that they are making more than 11 purchases per month, while only 16% of
+            the sample are ordering online products once or twice a month.
+        </div>
     </div>
     <div id="next">
         <div class="row">
@@ -102,15 +84,16 @@
                 <img height="200" width="250" src='./Assets/mobile_phone.png'>
             </div>
             <div class="column2">
-                <h1 style="margin-top:30px; color:black;font-size: 40px;">Online Sales Growth</h1>
+                <h1 style="margin-top:50px; color:black;">E-commerce from Online Retailers and Customer's views </h1>
             </div>
 
         </div>
         <div class="row">
 
             <div class="column1">
-                </>
                 <table class="reveal">
+                    <h1 style="font-size: 25px; color:black;">Who were the Top Online Retailers in 2020? </h1>
+                    <div style="width: 80%;margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px;">Here are the <span style="font-weight: bold; color:#6BB1CC">Top 10 Online Retailers</span> based on 2020 ecommerce revenue for each retailer.</div>
                     <thead>
                         <tr>
                             <th>Rank
@@ -232,7 +215,7 @@
                 </table>
             </div>
             <div class="column2 reveal">
-                <h1 style="margin-bottom: 35px;color:black;">Purchases by Sector for 2020</h1>
+                <h1 style="margin-bottom: 35px;color:black;font-size: 25px;">What online products did UK customers purchase in 2020?</h1>
                 <section class="bar-graph bar-graph-horizontal bar-graph-one reeveal" style="margin-left: 20%;">
                     <div class="bar-one">
                         <a>
@@ -310,68 +293,280 @@
             </div>
         </div>
 
-    </div>
-    <div id="next2">
-        <img src="./Assets/troley.png" height="200" style="margin-left: 10%;" alt="From PC to troley">
+        <div id="textbox" class="reveal" style="color: black; border-color:#6BB1CC;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;"></i>
+            <span style="font-weight: bold; font-size:17px;">Amazon</span> accounted for <span style="font-weight: bold;color:#6BB1CC; font-size:17px;">more than a third</span> of all ecommerce in UK. Although, the world’s largest online marketplace continues
+            to lead on share of e-commerce, some other top online retailers grow rapidly, as well.
+        </div>
+
+
+
+        <div id="textbox" class="reveal" style="color: black; border-color:#6BB1CC;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;"></i>
+            <span style="font-weight: bold; font-size:17px;">Clothing</span> is the <span style="font-weight: bold;color:#6BB1CC; font-size:17px;">most common online purchase</span> by customers in UK, according to a survey taken by Office for National
+            Statistics in 2020.
+        </div>
+
+
+
+        <p></p>
+
     </div>
 
-    <h1 style="color: black;">Last Section</h1>
+    <div class="current">
 
-    <div class='tableauPlaceholder' id='viz1640181179128' style='position: relative;margin-left:auto;margin-right:auto;'><object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-        <param name='name' value='Annualonlinesales&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
-        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' />
-    </object></div>
-    <script type='text/javascript'>
-        var divElement = document.getElementById('viz1640181179128');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if (divElement.offsetWidth > 800) {
-            vizElement.style.minWidth = '500px';
-            vizElement.style.maxWidth = '1000px';
-            vizElement.style.width = '100%';
-            vizElement.style.minHeight = '267px';
-            vizElement.style.maxHeight = '507px';
-            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-        } else if (divElement.offsetWidth > 500) {
-            vizElement.style.minWidth = '500px';
-            vizElement.style.maxWidth = '1000px';
-            vizElement.style.width = '100%';
-            vizElement.style.minHeight = '267px';
-            vizElement.style.maxHeight = '507px';
-            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-        } else {
-            vizElement.style.width = '100%';
-            vizElement.style.height = '727px';
-        }
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-    <div class="container">
-        <br />
-        <div class="row">
-            <canvas id="lineChart"></canvas>
+        <div id="next2" style="float:left; margin-top:50px;margin-left:15%;margin-right:35px;">
+
+            <h1 style="color: black;">Where does e-commerce stand compared to retail at the moment?</h1>
 
         </div>
-    </div>
-    <div class="container">
-        <br />
-        <div class="row">
 
-            <canvas id="lineChartFuture"></canvas>
+        <img src="./Assets/troley.png" height="150" alt="From PC to troley">
+
+
+
+        <h1 style="margin-top: 30px;margin-bottom: 30px;font-size: 27px;color:black;"><span class="online">Online</span> vs. In-Store Retail Sales for 2006-2020</h1>
+
+        <div class="wrapper">
+            <canvas id="stacked-chart"></canvas>
+        </div>
+
+        <div id="textbox2" style="border-color: #37A37E; color:black;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;color: #37A37E;"></i> Online’s share of total retail sales has steadily been on the rise, reaching a <span style="color: #37A37E;font-weight:bold; font-size:17px;">climax of 19.2%</span>            in February of 2020, according to ONS Statistics. That’s up from 18% in 2019 and 16.3% in 2018. Note that those are <span style="font-weight: bold;font-size:17px">pre-pandemic collected data</span>, which help us get a objectve point of view.
 
         </div>
-    </div>
 
-    <img style="margin-left:auto; margin-right:auto; margin-top:30px; position:relative; display:block;" height="402" width="592" src="./Assets/builders.png" alt="Builders">
-    <div class="footer">
-        <div style="position:absolute; padding-top:10px;padding-left:30%"> <img src="https://www.southampton.ac.uk/blog/wp-content/themes/replay/images/logos/university-of-southampton.svg" height="30px" alt="University of Southampton"></div>
-        <p style="color: white; opacity:0.5; padding-right:auto;padding-left:10px;position: absolute;bottom:0;">Antonis Poullis © 2022 | COMP6234 </p>
-    </div>
-    <script src="javascript/donut_chart.js"></script>
-    <script src="javascript/charts.js"></script>
-    <script src="javascript/reveal.js"></script>
+        <div id="textbox2" class="reveal" style="border-color: red; color:black;">
+            <i class="fas fa-virus" style="float: right;margin-top:-15px;margin-right:-10px;color: red;"></i> During 2020, online retail sales <span style="color: #FA3C3C;font-weight:bold;font-size:17px">climbed up to 36.3%</span> over total retail in
+            November with an average of 32.5% through-out the year, due to <span style="font-weight: bold;">Covid-19</span> consiquences .
+        </div>
+
+
+
+        <div class="container">
+            <br />
+            <div class="row">
+                <h1 style="color: black; font-size:25px;margin-bottom:30px;">Comparing growth:<span style="color: #5690A6;"> Internet sales</span> vs. Total retail year-on-year changes (%)</h1>
+                <canvas id="lineChart"></canvas>
+                <figcaption class="caption">Data Source <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi">Office of National Statistics</a>
+                </figcaption>
+
+            </div>
+        </div>
+        <div id="textbox" style="color: black; border-color:#6BB1CC;margin-bottom: 40px;">
+            <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;color:#6BB1CC;"></i> The trend of both statistics imply maintaining this pattern in the future, proving that <span style="color: #5690A6;font-weight:bold; font-size:17px;"> online sales</span>            has the <span style="color: #5690A6;font-weight:bold; font-size:17px;"> potential to grow even bigger</span>, while <span style="color: #F5090A;font-weight:bold; font-size:17px;">  in-store sales</span> are estimated to <span style="color: #F5090A;font-weight:bold; font-size:17px;"> expand in a more conservative
+            manner. </span> Additionally, it is shown that online sales growth reached a peak of 57.2% growth from 2019 to 2020 due to the pandemic’s outbreak, when all product purchases was required to take place online during lockdowns, followed by
+            a slight decline in growth for the first time since 2008, when things came back to normal.
+            <span style="font-weight: bold; font-size:17px;"></span> <span style="font-weight: bold;color:#6BB1CC; font-size:17px;"></span>
+
+        </div>
+
+
+        <div class="estimations" style="padding-bottom: 50px;">
+
+            <div id="next2" style="float:left; margin-top:50px;margin-left:25%;margin-right:35px;">
+
+                <h1> <i class="fas fa-chart-bar"></i> Estimations about Retail in the near Future</h1>
+
+            </div>
+
+            <img src="./Assets/projections1.png" height="150" alt="Projections">
+
+
+
+            <h1 style="margin-top: 30px;margin-bottom: 30px;font-size: 27px;"><span class="online">Online</span> vs. In-Store Retail Sales for 2020-2025</h1>
+
+            <div class="wrapper">
+                <canvas id="stacked-chart-future"></canvas>
+            </div>
+
+            <div id="textbox2" style="background-color: rgba(29, 26, 26, 0.5);">
+                <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;"></i> Online’s share of total retail sales is estimated to <span style="color: #37A37E;font-weight:bold; font-size:17px;">continue increasing</span> for
+                every year from 2021 to 2025. However, those slight changes are <span style="color: #37A37E;font-weight:bold; font-size:17px;">far from reaching the 50% barrier</span> to take over in-store retail.
+            </div>
+
+
+
+            <div class="container">
+                <br />
+                <div class="row">
+                    <h1 style="font-size:25px;margin-bottom:30px;">E-commerce revenue forecast 2020-2025</h1>
+                    <!-- <canvas id="lineChartFuture"></canvas> -->
+                    <div class="wrapper">
+                        <canvas id="bar-chart-future"></canvas>
+                    </div>
+                    <figcaption class="caption">Data Source <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi">Office of National Statistics</a>
+                    </figcaption>
+
+                </div>
+            </div>
+            <div id="textbox2" style=" border-color:#6BB1CC;margin-bottom: 40px;background-color: rgba(29, 26, 26, 0.5);">
+                <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;color:#6BB1CC;"></i> Since 2020 online sales has been on a non-stop rise and this trend is expected to continue until 2025. The <span style="font-weight: bold; font-size:17px;color:#6BB1CC;">estimated increase of roughly
+                    10%</span> from 97 to 119.1 billion dollars in a five year period shows a <span style="font-weight: bold;color:#6BB1CC; font-size:17px;">promising potential</span> in the field of online sales in United Kingdom.
+                <span style="font-weight: bold; font-size:17px;"></span>
+
+            </div>
+
+        </div>
+
+        <div id="before-conclusions">
+            <div id="next2" style="float:left; margin-top:50px;margin-left:35%;margin-right:35px;">
+
+                <h1 style="color: black;"><i class="fas fa-tshirt"></i> Online Clothing Sales</h1>
+
+
+            </div>
+
+            <img src="./Assets/clothes.png" height="150" alt="Clothes">
+
+            <p style="color: black;font-style: italic;font-weight:400;font-size:18px;color:black;margin-top:20px">Let's explore online sales current state even further by focusing on e-commerce’s growth per sector in September of 2021.</p>
+
+            <div class='tableauPlaceholder' id='viz1640891146198' style='position: relative;margin-left:auto;margin-right:auto;'>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                    <param name='name' value='Annualonlinesales&#47;Dashboard1' /><param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1640891146198');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '500px';
+                    vizElement.style.maxWidth = '1000px';
+                    vizElement.style.width = '100%';
+                    vizElement.style.minHeight = '267px';
+                    vizElement.style.maxHeight = '507px';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '500px';
+                    vizElement.style.maxWidth = '1000px';
+                    vizElement.style.width = '100%';
+                    vizElement.style.minHeight = '267px';
+                    vizElement.style.maxHeight = '507px';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '727px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <figcaption class="caption" style="color: black; text-align:center; margin-left: 100px;">Data Source <a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry/timeseries/j4mc/drsi">Office of National Statistics</a>
+            </figcaption>
+            <div id="textbox" style="color: black; border-color:#6BB1CC;margin-bottom: 40px;">
+                <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;"></i> It can be observed from the graph that even during the Covid-19 era that we are currently in, even now when retailing is underperforming and it’s
+                unable to adapt to this period of uncertainty, <span style="font-weight: bold; font-size:17px;">online clothing</span> sales are <span style="font-weight: bold;color:#6BB1CC; font-size:17px;">still on the rise</span> breaking record after
+                record.
+            </div>
+            <div class="box">
+                <i style="font-size:50px; margin-left:auto;margin-right:auto; display:block;color:black;" class="fas fa-chevron-down reveal"></i>
+            </div>
+            <div id="textbox" class="reveal" style="color: black; border-color:#6BB1CC;margin-bottom: 40px;">
+                This comes with no surprise, since online sales clothing platforms exponentially grew in sales and traffic over the last decade.
+            </div>
+            <i style="font-size:50px; margin-left:auto;margin-right:auto; display:block;color:black;" class="fas fa-chevron-down reveal"></i>
+            <div class="box reveal" style="margin-left:auto; margin-right:auto;width:55%; font-weight: bold; font-size:25px;color:#6BB1CC;">
+                But have online clothing sales what it takes to surpass in-store sales?
+                <div style='font-style: italic;font-weight:400;font-size:18px;color:black;margin-top:20px'>Let’s dive even deeper into online clothing sector, to investigate whether the potential is there, according to estimations and statistics.</div>
+
+            </div>
+
+            <div class="bar-graph bar-graph-vertical bar-graph-two reveal" style="margin-left:auto; margin-right:auto; display:block;width:15%">
+                <div class="bar-one1 bar-container1">
+                    <div class="bar3" data-percentage="47.1%"></div>
+                    <span class="year3">2021</span>
+                </div>
+                <div class="bar-two1 bar-container1">
+                    <div class="bar3" data-percentage="52%"></div>
+                    <span class="year3">2022</span>
+                </div>
+            </div>
+
+
+            <div id="textbox2" class="reveal" style=" border-color:#6BB1CC;  margin-top:270px;margin-bottom: 40px; color:black;">
+                <i class="far fa-lightbulb" style="float: right;margin-top:-15px;margin-right:-10px;color:#6BB1CC;"></i> United Kingdom will become the <span style="font-weight: bold;color:#6BB1CC; font-size:17px;">first European country to record online clothing sales overtaking in-store sales </span>                in 2022, three years earlier than excpected, according to the Future of the European Apparel Industry report. The next European country that is estimated to achieve something similar is Netherlands in 2025, when 52% of all clothing sales
+                are expected to take place online.
+                <span style="font-weight: bold; font-size:17px;"></span>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div id="conclusions">
+
+            <h1 style="margin-bottom: 20px;"><i class="fas fa-clipboard-list"></i> To wrap up...</h1>
+            <div class="conclusion">
+                <ol class="gradient-list">
+                    <li class="reveal">More and more people are regurarly shopping online in UK, purchasing more products than any other European country.</li>
+                    <li class="reveal">Amazon is the leading online retailer and clothing is the most common online purchase by UK customers.</li>
+                    <li class="reveal">E-commerce is growing in a much more faster pace than In-store retailing, but is still far from taking over.</li>
+                    <li class="reveal">Online Clothing is expected to surpass In-store retailing as soon as 2022.</li>
+
+                </ol>
+            </div>
+            <div class="container-tiles">
+                <div class="row">
+                    <div class="c-dashboardInfo column-tile">
+                        <div class="wrap">
+                            <h4 class=" c-dashboardInfo__title">Average Weekly Online Sales</h4><span class="hind-font caption-12 c-dashboardInfo__count">£3,028m</span>
+                        </div>
+                    </div>
+                    <div class="c-dashboardInfo column-tile">
+                        <div class="wrap">
+                            <h4 class="c-dashboardInfo__title">Online Retail Sales over Total Retail</h4><span class="hind-font caption-12 c-dashboardInfo__count">19.2%</span>
+                        </div>
+                    </div>
+                    <div class="c-dashboardInfo column-tile">
+                        <div class="wrap">
+                            <h4 class="c-dashboardInfo__title">Online Sales over Total Retail in 2025</h4><span class="hind-font caption-12 c-dashboardInfo__count">38.6%</span>
+                        </div>
+                    </div>
+                    <div class="c-dashboardInfo column-tile">
+                        <div class="wrap">
+                            <h4 class="c-dashboardInfo__title">Online Clothing over Total Retail in 2022</h4><span class="hind-font caption-12 c-dashboardInfo__count">52%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="subtitle-conclusion"> <span>We have a long way until online sales are taking over retail, but online shopping will continue to grow steadily until becoming the main type of retail in the future.</span></p>
+        </div>
+
+
+        <img style="margin-left:auto; margin-right:auto; margin-top:30px; position:relative; display:block;" height="402" width="592" src="./Assets/builders.png" alt="Builders">
+        <div class="footer">
+            <button id="scrolltotop" style="border-color:transparent;border-radius:20%;padding:5px;background:black;float: right; margin-right: 40px;  margin-top: 40px;"><i class="fas fa-chevron-up"></i></button>
+            <div style="position:absolute; padding-top:10px;padding-left:30%"> <img src="https://www.southampton.ac.uk/blog/wp-content/themes/replay/images/logos/university-of-southampton.svg" height="30px" alt="University of Southampton"></div>
+            <p style="color: white; opacity:0.5; padding-right:auto;padding-left:10px;position: absolute;bottom:0;">Antonis Poullis © 2022 | COMP6234 </p>
+        </div>
+
+        <script src="javascript/donut_chart.js"></script>
+        <script src="javascript/charts.js"></script>
+        <script src="javascript/future-chart.js"></script>
+        <script src="javascript/reveal.js"></script>
+
+        <script>
+            // Scroll to top button
+            var scrolltotop = document.getElementById("scrolltotop")
+            var rootElement = document.documentElement
+
+
+
+            function scrollFunction() {
+                rootElement.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+
+                })
+            }
+            if (scrolltotop) {
+                scrolltotop.addEventListener("click", scrollFunction)
+            }
+        </script>
 </body>
 
 </html>

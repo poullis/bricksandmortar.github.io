@@ -16,7 +16,7 @@ div.mybackground {
     width: 100%;
 }
 
-#viz1640181179128 {
+#viz1640891146198 {
     height: 500px !important;
     width: 55% !important;
     margin-top: 30px;
@@ -50,7 +50,7 @@ p {
     float: left;
     width: 40%;
     padding: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .column-logo {
@@ -123,6 +123,24 @@ h1 #mortar {
 
 .subtitle span:before {
     right: 95%;
+}
+
+.subtitle-conclusion span {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    font-style: italic;
+    font-family: "Newton";
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    /* border-bottom: 8px solid #fff; */
+    max-width: 40em;
+    line-height: 1.5;
 }
 
 main {
@@ -715,6 +733,40 @@ a:hover span.tooltip {
     text-align: center;
 }
 
+#textbox {
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    border-width: 1.5px;
+    width: 60%;
+    border-color: whitesmoke;
+    border-style: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#textbox:hover {
+    background-color: whitesmoke;
+}
+
+#textbox2 {
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    border-width: 1.5px;
+    width: 60%;
+    border-color: whitesmoke;
+    border-style: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*Tiles*/
 
@@ -723,13 +775,13 @@ a:hover span.tooltip {
 }
 
 .c-dashboardInfo .wrap {
-    background: #ffffff;
+    background: rgb(219, 218, 218);
     box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 40px 25px 20px;
+    padding: 40px 10px 20px;
     height: 100%;
 }
 
@@ -796,4 +848,258 @@ a:hover span.tooltip {
     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     user-select: none;
     flex-shrink: 0;
+}
+
+.caption {
+    text-align: right;
+    font-size: 12px;
+    width: 90%;
+}
+
+.caption a {
+    color: #407286;
+}
+
+#conclusions {
+    background-image: linear-gradient( 45deg, #6BB1CC, #26B999);
+    height: fit-content;
+    padding-bottom: 150px;
+}
+
+#conclusions::after {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 8vh 49vw;
+    border-bottom-color: whitesmoke;
+    border-left-color: whitesmoke;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#before-conclusions {
+    padding-bottom: 200px;
+    /* height: fit-content; */
+}
+
+#before-conclusions::after {
+    border-style: solid;
+    border-color: transparent;
+    border-width: 10vh 49vw;
+    border-bottom-color: #3EB6AB;
+    border-left-color: #3EB6AB;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.c-dashboardInfo .wrap:hover {
+    background-color: #ffffff;
+}
+
+.estimations {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(62, 134, 194, 0.5)), url(../Assets/lake.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+}
+
+
+/*Bar chart*/
+
+
+/* Bar Graph Vertical */
+
+.bar-graph .year3 {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+}
+
+.bar-graph-vertical {
+    margin-top: -50px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.bar-graph-vertical .bar-container1 {
+    float: left;
+    height: 250px;
+    margin-right: 8px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
+.bar-graph-vertical .bar3 {
+    border-radius: 3px;
+    bottom: 40px;
+    position: absolute;
+    width: 100px;
+}
+
+.bar-graph-vertical .year3 {
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.bar-graph-two .bar3::after {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    color: #fff;
+    content: attr(data-percentage);
+    font-weight: 700;
+    left: 0;
+    margin: 0 auto;
+    /* position: absolute; */
+    right: 0;
+    text-align: left;
+    top: 24px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.bar-graph-two .bar-one1 .bar3 {
+    background-color: #64b2d1;
+    -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+    animation: show-bar-one-vertical 1.2s 0.1s forwards;
+}
+
+.bar-graph-two .bar-two1 .bar3 {
+    background-color: #5292ac;
+    -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+    animation: show-bar-two-vertical 1.2s 0.2s forwards;
+}
+
+
+/* Bar Graph Vertical Animations */
+
+@-webkit-keyframes show-bar-one-vertical {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 44.1%;
+    }
+}
+
+@-webkit-keyframes show-bar-two-vertical {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 52%;
+    }
+}
+
+@-webkit-keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Bar chart*/
+
+
+/*Conclusions*/
+
+div .conclusion {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+    padding: 1rem;
+}
+
+ol.gradient-list {
+    /* counter-reset: gradient-counter; */
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+    /* background-color: rgb(202, 197, 197); */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ol.gradient-list>li {
+    background: whitesmoke;
+    border-color: #26B999 !important;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+}
+
+ol.gradient-list>li::before,
+ol.gradient-list>li::after {
+    background: linear-gradient(135deg, #26B999 0%, #2e515f 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+}
+
+ol.gradient-list>li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: white;
+    display: flex;
+    font: 900 1.5em/1;
+    justify-content: flex-end;
+    padding: 0.125em 0.25em;
+    font-weight: bold;
+    z-index: 1;
+}
+
+ol.gradient-list>li:nth-child(10n+1):before {
+    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%); */
+}
+
+ol.gradient-list>li:nth-child(10n+2):before {
+    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%); */
+}
+
+ol.gradient-list>li:nth-child(10n+3):before {
+    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%); */
+}
+
+ol.gradient-list>li+li {
+    margin-top: 2rem;
 }

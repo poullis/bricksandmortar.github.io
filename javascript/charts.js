@@ -56,6 +56,7 @@ var myChart = new Chart(ctx, {
 
 
 
+
 let ctx2 = document.getElementById("myDonutChart").getContext("2d");
 // var global = Chart.defaults.global;
 // global.defaultFontColor = "#888";
@@ -131,4 +132,5 @@ var DoughnutTextInsideChart = new Chart($('#myDonutChart')[0].getContext('2d')).
     responsive: true
 });
 
-DoughnutTextInsideChart.destroy();
+// DoughnutTextInsideChart.destroy();
+myChart.destroy();
