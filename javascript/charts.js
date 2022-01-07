@@ -19,16 +19,23 @@ var myChart = new Chart(ctx, {
     },
     options: {
         tooltips: {
+
             displayColors: true,
-            callbacks: {
-                mode: 'x',
-            },
+            mode: 'x',
+            multiTooltipTemplate: "My Text <%= datasetLabel %> - <%= value %>",
+            tooltipTemplate: "Label <%= label %>",
+
         },
         scales: {
             xAxes: {
                 stacked: true,
+                title: {
+                    display: true,
+                    text: 'Year'
+                },
                 gridLines: {
                     display: false,
+
                 }
             },
             yAxes: {
@@ -37,14 +44,20 @@ var myChart = new Chart(ctx, {
                     beginAtZero: true,
                 },
                 type: 'linear',
+                title: {
+                    display: true,
+                    text: 'Percentage over Total Retail (%)'
+                }
+
             }
         },
         plugins: {
             deferred: {
-                xOffset: 150, // defer until 150px of the canvas width are inside the viewport
-                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-                delay: 500 // delay of 500 ms after the canvas is considered inside the viewport
-            }
+                xOffset: 150,
+                yOffset: '50%',
+                delay: 500
+            },
+
         },
         responsive: true,
         maintainAspectRatio: false,
@@ -53,7 +66,8 @@ var myChart = new Chart(ctx, {
 
 });
 
-
+myChart.options.scales.yAxes.scaleLabel.labelString = "My New Title";
+myChart.update();
 
 
 
@@ -123,7 +137,17 @@ let myDonutChart = new Chart(ctx2, {
             mode: "point",
             titleFontColor: "black",
             bodyFontColor: "black",
-            backgroundColor: "#eee"
+            backgroundColor: "#eee",
+            callbacks: {
+                afterLabel: function(tooltipItem, data) {
+                    var sum = data.datasets.reduce((sum, dataset) => {
+                        return sum + dataset.data[tooltipItem.index];
+                    }, 0);
+                    var percent = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] / sum * 100;
+                    percent = percent.toFixed(2); // make a nice string
+                    return data.datasets[tooltipItem.datasetIndex].label + ': ' + percent + '%';
+                }
+            }
         }
     }
 });

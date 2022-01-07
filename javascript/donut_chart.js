@@ -94,16 +94,16 @@ var data4 = {
 // Notice the scaleLabel at the same level as Ticks
 var options = {
     scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true
-            },
-            scaleLabel: {
+        yAxes: {
+            title: {
                 display: true,
-                labelString: 'Moola',
-                fontSize: 20
-            }
-        }]
+                text: 'Percentage of growth from previous year (%)'
+            },
+            ticks: {
+                beginAtZero: true,
+            },
+
+        }
     }
 };
 
