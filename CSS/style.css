@@ -294,7 +294,7 @@ div.section1::after {
 #bottom {
     background: whitesmoke;
     height: fit-content;
-    padding-bottom: 70px;
+    padding-bottom: 130px;
 }
 
 #bottom::after {

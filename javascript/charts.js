@@ -66,8 +66,7 @@ var myChart = new Chart(ctx, {
 
 });
 
-myChart.options.scales.yAxes.scaleLabel.labelString = "My New Title";
-myChart.update();
+
 
 
 
