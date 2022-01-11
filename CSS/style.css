@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @import url(https://fonts.googleapis.com/css?family=Oswald:700|Neuton:400,400italic);
 div.mybackground {
     padding: 320px;
@@ -1080,18 +1079,6 @@ ol.gradient-list>li::before {
     padding: 0.125em 0.25em;
     font-weight: bold;
     z-index: 1;
-}
-
-ol.gradient-list>li:nth-child(10n+1):before {
-    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%); */
-}
-
-ol.gradient-list>li:nth-child(10n+2):before {
-    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%); */
-}
-
-ol.gradient-list>li:nth-child(10n+3):before {
-    /* background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%); */
 }
 
 ol.gradient-list>li+li {
