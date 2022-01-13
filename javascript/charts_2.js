@@ -5,9 +5,7 @@ var ctx3 = canvas3.getContext('2d');
 
 
 
-// // Global Options:
-// Chart.defaults.global.defaultFontColor = 'black';
-// Chart.defaults.global.defaultFontSize = 16;
+
 
 var data3 = {
     labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
@@ -30,7 +28,7 @@ var data3 = {
             pointHoverBorderWidth: 2,
             pointRadius: 4,
             pointHitRadius: 10,
-            // notice the gap in the data and the spanGaps: true
+
             data: [2.8, 4.3, 3.0, 1.9, 2.3, 3.5, 3.1, 4.1, 2.0, 3.2, 2.9, 4.6, 4.1, 3.2, 6.0, 0.2],
             spanGaps: true,
         }, {
@@ -52,7 +50,7 @@ var data3 = {
             pointHoverBorderWidth: 2,
             pointRadius: 4,
             pointHitRadius: 10,
-            // notice the gap in the data and the spanGaps: false
+
             data: [47.4, 22, 23.2, 17.3, 11.3, 18, 10.2, 14.6, 26.9, 12.8, 12.5, 8.9, 57.2, -1.2],
             spanGaps: false,
         }
@@ -83,7 +81,7 @@ var data4 = {
             pointHoverBorderWidth: 2,
             pointRadius: 4,
             pointHitRadius: 10,
-            // notice the gap in the data and the spanGaps: false
+
             data: [97, 103.9, 109.7, 113.8, 116.4, 119.1],
             spanGaps: false,
         }
@@ -91,7 +89,7 @@ var data4 = {
     ]
 };
 
-// Notice the scaleLabel at the same level as Ticks
+
 var options = {
     scales: {
         yAxes: {
@@ -107,7 +105,7 @@ var options = {
     }
 };
 
-// Chart declaration:
+
 var LineChart = new Chart(ctx3, {
     type: 'line',
     data: data3,

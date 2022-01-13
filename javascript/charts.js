@@ -71,18 +71,14 @@ var myChart = new Chart(ctx, {
 
 
 let ctx2 = document.getElementById("myDonutChart").getContext("2d");
-// var global = Chart.defaults.global;
-// global.defaultFontColor = "#888";
-// global.maintainAspectRatio = true;
+
 
 
 
 let myDonutChart = new Chart(ctx2, {
     plugins: [{
         beforeInit: function(chart) {
-            // chart.legend.afterFit = function() {
-            //     this.height = this.height - 40;
-            // };
+
         }
     }],
     type: "doughnut",
